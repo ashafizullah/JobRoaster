@@ -1,7 +1,15 @@
 <template>
   <div class="app">
     <nav class="navbar">
-      <div class="nav-brand">🔥 JobRoaster</div>
+      <div class="nav-brand">🔥 RoasterHub</div>
+      <div class="nav-categories">
+        <div class="dropdown">
+          <button class="dropbtn">Kategori Roaster ▼</button>
+          <div class="dropdown-content">
+            <router-link to="/">JobRoaster</router-link>
+          </div>
+        </div>
+      </div>
       <div class="nav-links">
         <router-link to="/">Beranda</router-link>
         <router-link to="/about">Tentang</router-link>
@@ -57,6 +65,56 @@ body {
 .nav-brand {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.nav-categories {
+  margin-right: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #c0392b;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 180px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #a5281b;
 }
 
 .nav-links {

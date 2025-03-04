@@ -3,6 +3,7 @@
     <div class="header">
       <h1>🔥 JobRoaster 🔥</h1>
       <p class="subtitle">Aplikasi untuk me-roast lowongan kerja yang tidak masuk akal</p>
+      <div class="roaster-badge">Bagian dari RoasterHub</div>
     </div>
     
     <JobForm 
@@ -92,6 +93,16 @@ h1 {
 .subtitle {
   font-size: 1.2rem;
   color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.roaster-badge {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
   margin-bottom: 30px;
 }
 

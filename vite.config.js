@@ -16,6 +16,15 @@ export default defineConfig({
   },
   // Tambahkan konfigurasi untuk mode dev
   build: {
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      external: [
+        // Eksternal URL untuk PDF.js worker
+        new RegExp('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/.*')
+      ]
+    }
+  },
+  optimizeDeps: {
+    exclude: ['pdfjs-dist']
   }
 })
