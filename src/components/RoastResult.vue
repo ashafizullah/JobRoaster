@@ -3,7 +3,7 @@
       <h2>Hasil Roasting:</h2>
       <div class="result-container">
         <div class="result-content">
-          <p v-for="(paragraph, index) in formattedRoast" :key="index">{{ paragraph }}</p>
+          <p v-for="(paragraph, index) in formattedRoast" :key="index" v-html="paragraph"></p>
         </div>
         <div class="actions">
           <button @click="copyToClipboard" class="copy-button">
@@ -34,7 +34,12 @@
     computed: {
       formattedRoast() {
         if (!this.roastText) return []
-        return this.roastText.split('\n').filter(line => line.trim() !== '')
+        return this.roastText.split('\n')
+          .filter(line => line.trim() !== '')
+          .map(line => {
+            // Ganti pola **teks** dengan <strong>teks</strong>
+            return line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          })
       }
     },
     methods: {
