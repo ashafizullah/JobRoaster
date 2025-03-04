@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <div class="header">
-      <h1>🔥 JobRoaster 🔥</h1>
-      <p class="subtitle">Aplikasi untuk me-roast lowongan kerja yang tidak masuk akal</p>
-      <div class="roaster-badge">Bagian dari RoasterHub</div>
+    <div class="text-center mb-5">
+      <h1 class="display-4 text-danger fw-bold">🔥 JobRoaster 🔥</h1>
+      <p class="lead text-muted">Aplikasi untuk me-roast lowongan kerja yang tidak masuk akal</p>
+      <span class="badge bg-danger rounded-pill px-3 py-2 mb-4">Bagian dari RoasterHub</span>
     </div>
     
     <JobForm 
@@ -19,9 +19,9 @@
       @reset="resetForm"
     />
     
-    <div class="error-message" v-if="errorMessage">
-      <p>{{ errorMessage }}</p>
-      <button @click="errorMessage = ''" class="close-error">Tutup</button>
+    <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-between align-items-center" role="alert" v-if="errorMessage">
+      <div>{{ errorMessage }}</div>
+      <button type="button" class="btn-close" @click="errorMessage = ''" aria-label="Close"></button>
     </div>
   </div>
 </template>
@@ -76,53 +76,5 @@ export default {
 .home {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-h1 {
-  color: #e74c3c;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  margin-bottom: 10px;
-}
-
-.roaster-badge {
-  display: inline-block;
-  background-color: #e74c3c;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 30px;
-}
-
-.error-message {
-  margin: 20px auto;
-  padding: 15px;
-  background-color: #f8d7da;
-  color: #721c24;
-  border-radius: 4px;
-  border: 1px solid #f5c6cb;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.close-error {
-  background-color: transparent;
-  border: none;
-  color: #721c24;
-  cursor: pointer;
-  font-weight: bold;
 }
 </style>

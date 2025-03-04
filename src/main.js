@@ -1,12 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router/index.js'
+import router from './router'
 
-// Buat aplikasi Vue
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css'
+// Import Bootstrap JavaScript and all its components
+import * as bootstrap from 'bootstrap'
+
+// Make bootstrap globally available
+window.bootstrap = bootstrap
+
 const app = createApp(App)
-
-// Pasang router ke aplikasi
 app.use(router)
-
-// Mount aplikasi ke DOM
 app.mount('#app')
