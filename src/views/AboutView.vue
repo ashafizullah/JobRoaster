@@ -2,37 +2,40 @@
   <div class="about">
     <div class="card shadow-sm mb-4">
       <div class="card-body">
-        <h1 class="card-title text-danger fw-bold border-bottom border-danger pb-2 mb-4">Tentang JobRoaster</h1>
+        <h1 class="card-title text-danger fw-bold border-bottom border-danger pb-2 mb-4">Tentang RoasterHub</h1>
         
         <div class="card-text">
           <p class="lead">
             <i class="bi bi-fire text-danger me-2"></i>
-            JobRoaster adalah aplikasi web yang menggunakan AI untuk "me-roast" lowongan kerja yang tidak masuk akal.
+            RoasterHub adalah platform yang menggunakan kecerdasan buatan (AI) untuk memberikan kritik yang sarkastik dan jenaka terhadap berbagai konten.
           </p>
           
           <p>
-            <i class="bi bi-robot text-danger me-2"></i>
-            Aplikasi ini memanfaatkan teknologi AI DeepSeek untuk menganalisis dan memberikan kritik yang kasar dan sarkastik
-            terhadap lowongan kerja yang memiliki persyaratan yang tidak realistis, kompensasi yang tidak sesuai, atau ekspektasi yang berlebihan.
+            <i class="bi bi-layers-fill text-danger me-2"></i>
+            Platform ini menyediakan berbagai fitur "roasting" untuk berbagai kategori konten, dengan JobRoaster sebagai salah satu fitur unggulan kami.
           </p>
           
-          <div class="mt-4">
-            <h5 class="fw-bold">
-              <i class="bi bi-clock-history text-danger me-2"></i>
-              Kapan waktu yang tepat untuk menggunakan JobRoaster:
-            </h5>
-            <ul class="list-group list-group-flush mt-2 mb-4">
-              <li class="list-group-item bg-light"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>Saat Anda menemukan lowongan kerja dengan persyaratan yang tidak masuk akal</li>
-              <li class="list-group-item bg-light"><i class="bi bi-cash-stack text-danger me-2"></i>Saat gaji yang ditawarkan jauh tidak sebanding dengan kualifikasi yang diminta</li>
-              <li class="list-group-item bg-light"><i class="bi bi-flag-fill text-danger me-2"></i>Saat job description penuh dengan red flags</li>
-              <li class="list-group-item bg-light"><i class="bi bi-emoji-laughing text-danger me-2"></i>Untuk hiburan dan kesenangan sesama pencari kerja</li>
-            </ul>
+          <div class="card bg-light mt-4 mb-4">
+            <div class="card-header bg-danger text-white">
+              <h5 class="mb-0"><i class="bi bi-briefcase-fill me-2"></i>JobRoaster</h5>
+            </div>
+            <div class="card-body">
+              <p>
+                JobRoaster merupakan fitur utama RoasterHub yang berfokus pada "me-roast" lowongan kerja yang tidak masuk akal.
+                Dengan menggunakan teknologi AI DeepSeek, JobRoaster memberikan kritik yang kasar dan sarkastik terhadap lowongan kerja yang memiliki:
+              </p>
+              <ul class="list-group list-group-flush mt-2 mb-3">
+                <li class="list-group-item bg-light"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>Persyaratan yang tidak realistis atau berlebihan</li>
+                <li class="list-group-item bg-light"><i class="bi bi-cash-stack text-danger me-2"></i>Gaji yang tidak sebanding dengan kualifikasi</li>
+                <li class="list-group-item bg-light"><i class="bi bi-flag-fill text-danger me-2"></i>Ekspektasi yang tidak masuk akal</li>
+              </ul>
+            </div>
           </div>
           
           <div class="alert alert-warning mt-4">
             <i class="bi bi-info-circle-fill me-2"></i>
-            <strong>Catatan:</strong> Aplikasi ini dibuat untuk tujuan hiburan. Kritik yang diberikan oleh AI bersifat sarkastik
-            dan mungkin tidak sepenuhnya akurat. Gunakan dengan bijak!
+            <strong>Catatan:</strong> Platform ini dibuat untuk tujuan hiburan semata. Kritik yang diberikan oleh AI bersifat sarkastik
+            dan tidak boleh diambil secara personal. Gunakan dengan bijak dan nikmati sisi humornya!
           </div>
         </div>
         
@@ -75,9 +78,13 @@ export default {
 }
 
 /* Add hover effect on social media icons */
-.bi-github:hover, .bi-twitter-x:hover, .bi-linkedin:hover {
+.bi-whatsapp:hover, .bi-linkedin:hover {
   color: #e74c3c !important;
   transform: scale(1.2);
   transition: all 0.3s ease;
+}
+
+.card-header {
+  border-radius: 4px 4px 0 0 !important;
 }
 </style>

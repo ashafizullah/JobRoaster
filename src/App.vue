@@ -35,7 +35,7 @@
     
     <footer class="bg-dark text-white py-3">
       <div class="container text-center">
-        <p class="mb-0">&copy; {{ new Date().getFullYear() }} JobRoaster. Project ini terintegrasi dengan DeepSeek AI.</p>
+        <p class="mb-0">&copy; {{ new Date().getFullYear() }} RoasterHub.</p>
       </div>
     </footer>
   </div>
